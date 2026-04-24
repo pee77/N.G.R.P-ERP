@@ -1,0 +1,40 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f4f7fb 0%, #eef2f5 100%);
+  color: #222;
+}
+
+.vite-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.vite-panel {
+  width: min(720px, 100%);
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  border: 1px solid #dbe3ea;
+  box-shadow: 0 12px 40px rgba(22, 33, 43, 0.08);
+}
+
+.vite-panel h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.vite-panel p {
+  margin: 0;
+  line-height: 1.5;
+}

@@ -1,0 +1,89 @@
+/* Step 7 style strategy: legacy CSS first, controlled overrides second. */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+small {
+  display: block;
+  margin-top: 6px;
+  color: #d62121;
+}
+
+/* Header buttons replaced former placeholder anchors; remove native button chrome. */
+.classynav ul li > button {
+  background: transparent;
+  border: 0;
+  padding: 0 12px;
+  display: block;
+  height: 35px;
+  line-height: 34px;
+  color: #787878;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.classynav ul li > button:hover,
+.classynav ul li > button:focus {
+  color: #000;
+}
+
+@media only screen and (max-width: 991px) {
+  .classynav ul li > button {
+    padding: 0 10px;
+    height: 38px;
+    line-height: 38px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.header-meta .search-area form button,
+.header-meta .favourite-area button,
+.header-meta .user-login-info button,
+.header-meta .cart-area button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-meta button:focus-visible,
+.classynav ul li > button:focus-visible {
+  outline: 2px solid #0315ff;
+  outline-offset: 2px;
+}
+
+.header_area .classy-navbar .nav-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header_area .classy-navbar .site-header-logo {
+  width: 240px;
+  max-width: min(36vw, 240px);
+  height: 72px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .header_area .classy-navbar .site-header-logo {
+    width: 140px;
+    height: 36px;
+  }
+}
