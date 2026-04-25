@@ -13,12 +13,12 @@ export const metadata = {
 export default function ShopPage() {
   return (
     <main>
-      <div className="breadcumb_area bg-img" style={{ backgroundImage: "url('https://placehold.co/1920x300/0B1F33/FFF?text=Catálogo+Técnico')" }}>
+      <div className="breadcumb_area bg-img" style={{ backgroundImage: "url('/src/assets/images/protonlab/light_shop_banner.png')", backgroundPosition: "center center", backgroundSize: "cover", marginTop: "140px" }}>
         <div className="container h-100">
           <div className="row h-100 align-items-center">
             <div className="col-12">
               <div className="page-title text-center">
-                <h2 style={{ color: "white" }}>Catálogo B2B</h2>
+                <h2 style={{ color: "black", textShadow: "0px 0px 10px rgba(255,255,255,0.8)" }}>Catálogo B2B</h2>
               </div>
             </div>
           </div>

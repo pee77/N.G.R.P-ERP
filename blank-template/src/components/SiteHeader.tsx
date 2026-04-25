@@ -2,7 +2,7 @@
 
 import { useCart } from "@/context/CartContext";
 import { Link } from "react-router-dom";
-import logoProtonLab from "@/assets/images/protonlab/logo-protonlab.png";
+import ProtonLogo from "@/components/ProtonLogo";
 
 export default function SiteHeader() {
   const { itemCount, toggleCart } = useCart();
@@ -11,15 +11,8 @@ export default function SiteHeader() {
     <header className="header_area">
       <div className="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
         <nav className="classy-navbar" id="essenceNav">
-          <Link className="nav-brand" to="/">
-            <img
-              src={logoProtonLab}
-              alt="Proton Lab"
-              width={240}
-              height={80}
-              className="site-header-logo"
-              sizes="(max-width: 767px) 140px, 240px"
-            />
+          <Link className="nav-brand" to="/" style={{ textDecoration: 'none' }}>
+            <ProtonLogo className="site-header-logo" />
           </Link>
 
           <div className="classy-navbar-toggler">
@@ -39,7 +32,7 @@ export default function SiteHeader() {
             </div>
 
             <div className="classynav">
-              <ul>
+              <ul style={{ display: 'flex', flexDirection: 'row', gap: '20px', listStyle: 'none', margin: 0, padding: 0, alignItems: 'center' }}>
                 <li>
                   <Link to="/">Inicio</Link>
                 </li>
@@ -59,7 +52,12 @@ export default function SiteHeader() {
                   <Link to="/contact">Contacto</Link>
                 </li>
                 <li>
-                  <Link to="/login">Portal clientes</Link>
+                  <Link to="/login" style={{ display: 'flex', alignItems: 'center' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: '6px' }}>
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                    </svg>
+                    Ingresar
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -74,16 +72,6 @@ export default function SiteHeader() {
                 <i className="fa fa-search" aria-hidden="true" />
               </button>
             </form>
-          </div>
-          <div className="favourite-area">
-            <button type="button" aria-label="Favorites">
-              <img src="/img/core-img/heart.svg" alt="Favorite" width={24} height={24} />
-            </button>
-          </div>
-          <div className="user-login-info">
-            <button type="button" aria-label="User account">
-              <img src="/img/core-img/user.svg" alt="User" width={24} height={24} />
-            </button>
           </div>
           <div className="cart-area">
             <button type="button" id="essenceCartBtn" onClick={toggleCart}>

@@ -1,0 +1,80 @@
+/* Proton Lab - B2B Theme Overrides */
+
+:root {
+  --primary-color: #0B1F33; /* Azul petróleo */
+  --secondary-color: #0EA5A4; /* Cian/teal tecnológico */
+  --accent-color: #2563EB; /* Azul eléctrico moderado */
+  --bg-color: #F8FAFC; /* Blanco frío */
+  --text-color: #111827; /* Gris carbón */
+  
+  --success-color: #10B981;
+  --warning-color: #F59E0B;
+  --danger-color: #EF4444;
+
+  --border-radius-base: 8px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, select, textarea {
+  font-family: 'Inter', sans-serif !important;
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6, .hero-content h2, .catagory-content a {
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+/* Override Links and Accents */
+a:hover, a:focus {
+  color: var(--secondary-color) !important;
+}
+
+/* Override Buttons */
+.essence-btn {
+  background-color: var(--primary-color) !important;
+  border-radius: var(--border-radius-base) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+}
+
+.essence-btn:hover {
+  background-color: var(--secondary-color) !important;
+}
+
+/* Override Headers and Navbar */
+.header_area .classy-nav-container {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.classynav ul li a {
+  color: var(--primary-color) !important;
+  font-weight: 500 !important;
+}
+
+.classynav ul li a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Cards & Images */
+.single-product-wrapper {
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+.product-img img {
+  border-radius: var(--border-radius-base) var(--border-radius-base) 0 0;
+}
+
+/* Badges */
+.product-badge span {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
