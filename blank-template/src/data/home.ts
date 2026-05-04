@@ -1,6 +1,7 @@
 import type { Category, Product } from "@/types/commerce";
 
 export const hero = {
+  eyebrow: "Proton Lab",
   title: "Equipamiento, insumos y soporte técnico para empresas de tecnología de vanguardia B2B",
   ctaText: "Ver catálogo",
   ctaHref: "/shop",

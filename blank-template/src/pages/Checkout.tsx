@@ -11,18 +11,6 @@ export const metadata = {
 export default function CheckoutPage() {
   return (
     <main>
-      <div className="breadcumb_area bg-img" style={{ backgroundImage: "url('/img/bg-img/breadcumb.jpg')" }}>
-        <div className="container h-100">
-          <div className="row h-100 align-items-center">
-            <div className="col-12">
-              <div className="page-title text-center">
-                <h2>Checkout</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="checkout_area section-padding-80">
         <div className="container">
           <div className="row">

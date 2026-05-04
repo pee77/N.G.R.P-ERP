@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
 type HeroSectionProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   ctaText: string;
   ctaHref: string;
   bgImages: string[];
 };
 
-export default function HeroSection({ eyebrow, title, ctaText, ctaHref, bgImages }: HeroSectionProps) {
+export default function HeroSection({ eyebrow = "", title, ctaText, ctaHref, bgImages }: HeroSectionProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
