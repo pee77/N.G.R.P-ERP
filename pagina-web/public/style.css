@@ -1,0 +1,390 @@
+    /* ####################################################
+    :: Template Name: Essence - Fashion Ecommerce Template
+    :: Author: Colorlib
+    :: Author URL: https://colorlib.com
+    :: Description: Essence is smart & elegant fashion e-commerce Template. It's suitable for all e-commerce business platform.
+    :: Version: 1.0.0
+    :: Created: April 27, 2018
+    :: Last Updated: May 2, 2018
+    #################################################### */
+
+        /* ---------------------------------------
+        ##### - PLACE YOUR CUSTOM CSS HERE - #####
+        --------------------------------------- */
+
+/* Tipografía: variables y escala */
+:root{
+    --font-sans: 'Inter', 'Roboto', 'Open Sans', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fs-xxl: 48px;
+    --fs-xl: 32px;
+    --fs-lg: 24px;
+    --fs-md: 20px;
+    --fs-base: 16px;
+    --fs-sm: 14px;
+    --line-height-base: 1.5;
+
+    /* Paleta de colores (coherente con la propuesta) */
+    --color-primary: #007BFF; /* Azul Tecnológico */
+    --color-secondary: #343A40; /* Gris Oscuro */
+    --color-accent: #28A745; /* Verde Lima */
+    --color-bg: #FFFFFF; /* Fondo Claro */
+    --color-bg-soft: #F8F9FA; /* Fondo Suave */
+    --color-text: #343A40; /* Texto principal */
+    --color-muted: #6C757D; /* Texto secundario */
+    --color-on-dark: #FFFFFF; /* Texto sobre fondos oscuros */
+}
+
+/* Base */
+html{font-size:var(--fs-base);} 
+body{
+    font-family:var(--font-sans);
+    font-weight:var(--fw-regular);
+    line-height:var(--line-height-base);
+    color:inherit;
+}
+
+/* Colores base y reglas para elementos interactivos */
+body{background-color:var(--color-bg);color:var(--color-text)}
+
+/* Enlaces */
+a{color:var(--color-primary)}
+a:hover,a:focus{color:color-mix(in srgb, var(--color-primary) 80%, black);text-decoration:underline}
+
+/* Botones primarios (override ligero si se usa Bootstrap) */
+.btn-primary{background-color:var(--color-primary);border-color:var(--color-primary);color:var(--color-on-dark)}
+.btn-primary:hover{background-color:color-mix(in srgb, var(--color-primary) 85%, black);border-color:color-mix(in srgb, var(--color-primary) 85%, black)}
+
+/* Texto secundario */
+.text-muted, .caption, small{color:var(--color-muted)}
+
+/* Fondos */
+.bg-soft{background-color:var(--color-bg-soft)}
+.bg-primary{background-color:var(--color-primary);color:var(--color-on-dark)}
+
+
+/* Escala tipográfica para encabezados */
+h1{font-size:var(--fs-xxl);line-height:1.1;margin:0 0 .5rem;font-weight:var(--fw-semibold);} 
+h2{font-size:var(--fs-xl);line-height:1.15;margin:0 0 .5rem;font-weight:var(--fw-semibold);} 
+h3{font-size:var(--fs-lg);line-height:1.2;margin:0 0 .5rem;font-weight:var(--fw-medium);} 
+h4{font-size:var(--fs-md);line-height:1.25;margin:0 0 .5rem;font-weight:var(--fw-medium);} 
+h5{font-size:var(--fs-base);line-height:1.3;margin:0 0 .5rem;font-weight:var(--fw-medium);} 
+h6{font-size:var(--fs-sm);line-height:1.35;margin:0 0 .5rem;font-weight:var(--fw-medium);} 
+
+/* Texto corporal y utilidades */
+p, ul, ol, dl { font-size:var(--fs-base); margin:0 0 1rem; }
+.muted{color:#6b7280;} /* texto secundario */
+
+/* Enlaces de navegación y elementos importantes: peso medio */
+header a, .classynav a, .classy-nav-container a, nav a, .main-nav a {
+    font-weight:var(--fw-medium);
+}
+
+/* Utilidades */
+.fw-regular{font-weight:var(--fw-regular);} 
+.fw-medium{font-weight:var(--fw-medium);} 
+.fw-semibold{font-weight:var(--fw-semibold);} 
+
+/* Mejora de accesibilidad: foco visible */
+a:focus, button:focus, [tabindex]:focus{outline:3px solid rgba(59,130,246,.3);outline-offset:2px}
+
+/* Espaciado y Alineación */
+:root{
+    /* Spacing scale (multiples of 4px and 8px) */
+    --space-xxs:4px;  /* 4 */
+    --space-xs:8px;   /* 8 */
+    --space-sm:12px;  /* 12 */
+    --space-md:16px;  /* 16 */
+    --space-lg:24px;  /* 24 */
+    --space-xl:32px;  /* 32 */
+    --space-xxl:48px; /* 48 */
+}
+
+/* Padding utilities */
+.p-0{padding:0}
+.p-1{padding:var(--space-xxs)}
+.p-2{padding:var(--space-xs)}
+.p-3{padding:var(--space-md)}
+.p-4{padding:var(--space-lg)}
+.p-5{padding:var(--space-xl)}
+.pt-1{padding-top:var(--space-xxs)}
+.pr-1{padding-right:var(--space-xxs)}
+.pb-1{padding-bottom:var(--space-xxs)}
+.pl-1{padding-left:var(--space-xxs)}
+.py-1{padding-top:var(--space-xxs);padding-bottom:var(--space-xxs)}
+.px-1{padding-left:var(--space-xxs);padding-right:var(--space-xxs)}
+.pt-2{padding-top:var(--space-xs)}
+.py-2{padding-top:var(--space-xs);padding-bottom:var(--space-xs)}
+
+/* Margin utilities */
+.m-0{margin:0}
+.m-1{margin:var(--space-xxs)}
+.m-2{margin:var(--space-xs)}
+.m-3{margin:var(--space-md)}
+.m-4{margin:var(--space-lg)}
+.m-5{margin:var(--space-xl)}
+.mt-1{margin-top:var(--space-xxs)}
+.mb-1{margin-bottom:var(--space-xxs)}
+.mx-1{margin-left:var(--space-xxs);margin-right:var(--space-xxs)}
+.my-1{margin-top:var(--space-xxs);margin-bottom:var(--space-xxs)}
+
+/* Gap utilities for flex/grid */
+.gap-1{gap:var(--space-xxs)}
+.gap-2{gap:var(--space-xs)}
+.gap-3{gap:var(--space-md)}
+.gap-4{gap:var(--space-lg)}
+
+/* Flex and alignment helpers */
+.d-flex{display:flex}
+.d-inline-flex{display:inline-flex}
+.items-center{align-items:center}
+.items-start{align-items:flex-start}
+.items-end{align-items:flex-end}
+.justify-center{justify-content:center}
+.justify-between{justify-content:space-between}
+.flex-column{flex-direction:column}
+
+/* Utility to quickly center items vertically in common containers */
+.align-children-center{display:flex;align-items:center}
+
+/* Eliminar bordes de botones en Chrome/Safari */
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ocultar botones de favoritos (corazón) en las tarjetas de producto - ELIMINADO PARA EL CONTADOR */
+.product-favourite {
+  display: block !important; /* Volver a mostrar */
+}
+
+.single-product-wrapper .product-img .product-favourite {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.product-favourite button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100 !important;
+  background: white !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 45px !important;
+  height: 45px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.product-favourite button:hover {
+  transform: scale(1.1);
+}
+
+.product-favourite button i {
+  color: #ff4444;
+  font-size: 16px;
+}
+
+.product-favourite button span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #333;
+  margin-top: -2px;
+}
+
+/* Forzar eliminación de bordes y estilos por defecto en botones de la barra lateral */
+.catagories-menu button {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font: inherit !important;
+  color: inherit !important;
+  cursor: pointer !important;
+  outline: none !important;
+  box-shadow: none !important;
+  text-align: left !important;
+}
+
+.catagories-menu button:focus,
+.catagories-menu button:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Regla para fotos en el detalle de producto */
+.single_product_thumb img {
+  max-width: 400px !important;
+  max-height: 400px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Estilos para las etiquetas de productos (badges) */
+.product-badge {
+  height: 25px;
+  padding: 0 15px;
+  border-radius: 20px !important; /* Bordes redondeados */
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  line-height: 25px;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  color: #fff;
+}
+
+.product-badge.new-badge {
+  background-color: var(--color-primary) !important; /* Primario Azul Tecnológico */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.product-badge.offer-badge {
+  background-color: var(--color-accent) !important; /* Verde Lima */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.product-badge span {
+  border: none !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+/* Navbar and card alignment helpers (apply to wrappers) */
+.navbar-center{display:flex;align-items:center;justify-content:space-between}
+.card-body{display:flex;flex-direction:column;gap:var(--space-sm)}
+
+/* Responsive tweak: reduce large headings on small screens */
+@media (max-width:768px){
+    h1{font-size:32px}
+    h2{font-size:24px}
+}
+
+/* Forzar encabezados a color secundario para todas las pantallas */
+h1,h2,h3,h4,h5,h6{color:var(--color-secondary) !important}
+
+/* Header responsive alignment */
+@media (max-width: 991px) {
+  .header_area .classy-nav-container {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .header_area .classy-navbar {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header_area .header-meta {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .header_area .search-area {
+    flex: 1 1 180px;
+  }
+
+  .header_area .search-area form {
+    width: 100%;
+  }
+
+  .header_area .search-area form input {
+    width: 100%;
+  }
+
+  .header_area .user-login-info {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .header_area .search-area {
+    flex: 1 1 140px;
+  }
+
+  .header_area .user-login-info a {
+    font-size: 16px;
+  }
+}
+
+/* Header logo and nav list */
+.header_area .nav-brand {
+  overflow: visible;
+}
+
+.site-header-logo {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+}
+
+.site-nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.mobile-cart-item {
+  display: none;
+}
+
+.mobile-cart-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .site-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-cart-desktop {
+    display: none;
+  }
+
+  .mobile-cart-item {
+    display: block;
+  }
+}
+
+@media (max-width: 575px) {
+  .site-header-logo {
+    max-width: 200px;
+  }
+}
