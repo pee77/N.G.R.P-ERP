@@ -19,7 +19,9 @@ export default function PageBanner() {
   // No mostramos el banner en la Home
   if (location.pathname === "/") return null;
 
-  const title = routeTitles[location.pathname] || "Proton Lab";
+  const title = location.pathname.startsWith("/products/")
+    ? "Detalle de Producto"
+    : routeTitles[location.pathname] || "Proton Lab";
 
   return (
     <div className="breadcumb_area" style={{ height: "auto", marginTop: "0px", position: "relative", overflow: "hidden" }}>

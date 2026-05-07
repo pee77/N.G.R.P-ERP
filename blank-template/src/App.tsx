@@ -26,6 +26,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/single-product-details" element={<SingleProductDetails />} />
+        <Route path="/products/:slug" element={<SingleProductDetails />} />
         <Route path="/regular-page" element={<RegularPage />} />
       </Route>
     </Routes>

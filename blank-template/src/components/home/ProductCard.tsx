@@ -12,11 +12,12 @@ type ProductCardProps = {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCart();
+  const productHref = product.href || `/products/${product.slug}`;
 
   return (
     <div className="single-product-wrapper">
       <div className="product-img">
-        <Link to={product.href}>
+        <Link to={productHref}>
           <img src={product.image} alt={product.name} width={600} height={800} />
           {product.hoverImage ? (
             <img className="hover-img" src={product.hoverImage} alt={`${product.name} hover`} width={600} height={800} />
@@ -36,7 +37,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
       <div className="product-description">
         <span>{product.brand}</span>
-        <Link to={product.href}>
+        <Link to={productHref}>
           <h6>{product.name}</h6>
         </Link>
 

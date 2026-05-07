@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useCart } from "@/context/CartContext";
-import { mockCommerceApi } from "@/lib/commerce-api";
+import { commerceApi } from "@/lib/commerce-api";
 import { formatMoney } from "@/lib/pricing";
 import { isRequired, isValidEmail, numericLengthBetween, postalCodeValid } from "@/lib/validation";
 import type { CheckoutAddress, CheckoutInput } from "@/types/commerce";
@@ -134,8 +134,8 @@ export default function CheckoutForm() {
 
     try {
       setSubmitting(true);
-      const response = await mockCommerceApi.checkout.submitOrder(payload);
-      setSubmitSuccess(`Order placed successfully. Order ID: ${response.orderId}`);
+      const response = await commerceApi.checkout.submitQuote(payload);
+      setSubmitSuccess(`Quote request submitted successfully. Quote ID: ${response.quoteId}`);
       clearCart();
       setForm(initialData);
     } catch {

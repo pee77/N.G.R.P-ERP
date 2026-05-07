@@ -1,4 +1,5 @@
 import type { Category } from "@/types/commerce";
+import { Link } from "react-router-dom";
 
 type CategoriesSectionProps = {
   categories: Category[];
@@ -16,7 +17,7 @@ export default function CategoriesSection({ categories }: CategoriesSectionProps
                 style={{ backgroundImage: `url('${category.image}')` }}
               >
                 <div className="catagory-content">
-                  <a href={category.href}>{category.name}</a>
+                  <Link to={category.href || `/shop?category=${category.slug}`}>{category.name}</Link>
                 </div>
               </div>
             </div>

@@ -97,3 +97,8 @@ export type OrderPreview = {
   items: CartItem[];
   pricing: PricingBreakdown;
 };
+
+export type QuoteSubmissionResult = {
+  quoteId: string;
+  status: string;
+};
